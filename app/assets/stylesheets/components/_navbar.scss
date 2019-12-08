@@ -20,7 +20,7 @@
     text-decoration: none;
 
     &.active {
-      background: $gray;
+      background: $gray !important;
       color: white;
     }
 
