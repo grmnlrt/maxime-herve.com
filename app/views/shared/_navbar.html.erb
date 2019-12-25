@@ -1,9 +1,9 @@
 <ul class="navbar-mh">
   <li>
-    <%= link_to "Games", games_path, class: "#{'active' if params[:controller].include?('game')}" %>
+    <%= link_to "Movies", movies_path, class: "#{'active' if params[:controller].include?('movie')}" %>
   </li>
   <li>
-    <%= link_to "Movies", movies_path, class: "#{'active' if params[:controller].include?('movie')}" %>
+    <%= link_to "Games", games_path, class: "#{'active' if params[:controller].include?('game')}" %>
   </li>
   <li>
     <%= link_to "IMDB", "https://www.imdb.com/name/nm7161845/", target: "_blank" %>
