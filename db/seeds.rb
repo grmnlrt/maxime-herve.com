@@ -1,5 +1,7 @@
 require 'csv'
 
+return if Rails.env.production?
+
 Movie.destroy_all
 Game.destroy_all
 
