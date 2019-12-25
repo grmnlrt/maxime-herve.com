@@ -3,6 +3,8 @@ class PagesController < ApplicationController
   end
 
   def contact
+  end
 
+  def informations
   end
 end
