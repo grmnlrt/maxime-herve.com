@@ -3,11 +3,11 @@
   justify-content: space-around;
   align-items: center;
   padding: 10%;
-  background: #000;
+  background: $gray;
 
   a {
     z-index: 2;
-    color: white;
+    color: $gray;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 2em;
@@ -19,7 +19,7 @@
       display: block;
       width: 0;
       height: 4px;
-      background: white;
+      background: $gray;
       transition: width .3s ease;
       margin: auto;
     }
@@ -32,7 +32,7 @@
   canvas {
     position: absolute;
     filter: grayscale(1);
-    opacity: 0;
+    // opacity: 0;
     transition: opacity .3s ease;
   }
 
