@@ -1,0 +1,18 @@
+.pagination {
+  border: 1px $gray solid;
+  width: fit-content;
+  margin: 24px auto;
+
+  a {
+    padding: 8px 0;
+    border: 1px $gray solid;
+    width: 120px;
+    text-align: center;
+    color: $gray;
+    text-decoration: none;
+
+    &:hover {
+      background: $light-gray;
+    }
+  }
+}

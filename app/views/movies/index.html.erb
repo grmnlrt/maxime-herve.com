@@ -3,7 +3,7 @@
     <div class="col">
       <% @movies.each do |movie| %>
         <div class="movie-card">
-          <%= instance_image_tag movie.photo %>
+          <%= instance_image_tag movie.photo, height: 300, width: 220 %>
           <div class="content">
             <h2><%= movie.title %> (<%= movie.year %>)</h2>
             <% if movie.movie_type? %>
@@ -22,6 +22,10 @@
           </div>
         </div>
       <% end %>
+      <div class="pagination">
+        <%= link_to_prev_page @movies, 'Previous' %>
+        <%= link_to_next_page @movies, 'Next' %>
+      </div>
     </div>
   </div>
 </div>
