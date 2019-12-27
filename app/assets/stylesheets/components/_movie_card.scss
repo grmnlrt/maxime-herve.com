@@ -18,6 +18,16 @@
 
   h2 {
     font-size: 1.8rem;
+    margin: 0;
+  }
+
+  .type {
+    margin: 0 0 8px 0;
+    background: $gray;
+    display: inline-block;
+    color: white;
+    padding: 2px 8px;
+    font-size: .8em;
   }
 
   .details, .synopsis {
@@ -30,6 +40,7 @@
   }
 
   .synopsis {
-    margin-top: 16px;
+    margin-top: 12px;
+    font-size: 0.9em;
   }
 }
