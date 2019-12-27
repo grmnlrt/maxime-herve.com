@@ -1,5 +1,19 @@
-<ul>
-  <% @movies.each do |movie| %>
-    <li><%= movie.title %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <% @movies.each do |movie| %>
+        <div class="movie-card">
+          <%= image_tag "https://images.unsplash.com/photo-1545039572-895c69ae937e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=550&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=340" %>
+          <div class="content">
+            <h2><%= movie.title %></h2>
+            <p class="type"><%= movie.movie_type %></p>
+            <p class="details">De <span><%= movie.director %></span></p>
+            <p class="details">Avec <span><%= movie.casting %></span></p>
+            <p class="details">Produit par <span><%= movie.production %></span></p>
+            <p class="synopsis"><%= movie.synopsis %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
