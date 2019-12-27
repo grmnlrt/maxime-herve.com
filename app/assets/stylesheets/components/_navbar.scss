@@ -6,6 +6,7 @@
   max-width: 640px;
   margin: auto;
   border-bottom: $gray solid 2px;
+  margin-bottom: 56px;
 
   li {
     flex: 1;
@@ -18,6 +19,9 @@
     justify-content: center;
     color: $gray;
     text-decoration: none;
+    font-family: $navbar-font;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     &.active {
       background: $gray !important;

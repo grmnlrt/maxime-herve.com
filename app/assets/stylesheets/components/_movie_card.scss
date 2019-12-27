@@ -1,0 +1,35 @@
+.movie-card {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  max-height: 300px;
+  overflow: hidden;
+  margin-bottom: 32px;
+
+  img {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .content {
+    margin-left: 24px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .details, .synopsis {
+    font-weight: 300;
+    margin: 0;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  .synopsis {
+    margin-top: 16px;
+  }
+}
