@@ -7,4 +7,12 @@ module ApplicationHelper
       str
     end
   end
+
+  def instance_image_tag(photo, options = {})
+    if photo.attached?
+      image_tag photo, options
+    else
+      image_tag "no-picture.png", options
+    end
+  end
 end

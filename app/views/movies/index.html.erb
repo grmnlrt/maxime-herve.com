@@ -3,7 +3,7 @@
     <div class="col">
       <% @movies.each do |movie| %>
         <div class="movie-card">
-          <%= image_tag "https://images.unsplash.com/photo-1545039572-895c69ae937e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=550&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=340" %>
+          <%= instance_image_tag movie.photo %>
           <div class="content">
             <h2><%= movie.title %> (<%= movie.year %>)</h2>
             <% if movie.movie_type? %>
