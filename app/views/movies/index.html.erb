@@ -1,5 +1,10 @@
 <ul>
   <% @movies.each do |movie| %>
-    <li><%= movie.title %></li>
+    <li>
+      <%= movie.title %>
+      <% if movie.photo.attached? %>
+        <%= cl_image_tag movie.photo.key, width: 300 %>
+      <% end %>
+    </li>
   <% end %>
 </ul>
