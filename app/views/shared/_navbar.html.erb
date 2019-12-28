@@ -18,3 +18,31 @@
     <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('contact')}" %>
   </li>
 </ul>
+<div class="mobile-menu-mh" data-controller="css" data-css-class="show">
+  <div class="burger" data-action="click->css#toggleClass">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="mask"></div>
+  <ul>
+    <li>
+      <%= link_to "Movies", movies_path, class: "#{'active' if params[:controller].include?('movie')}" %>
+    </li>
+    <li>
+      <%= link_to "Games", games_path, class: "#{'active' if params[:controller].include?('game')}" %>
+    </li>
+    <li>
+      <%= link_to "IMDB", "https://www.imdb.com/name/nm7161845/", target: "_blank" %>
+    </li>
+    <li>
+      <%= link_to "Spotify", "https://www.imdb.com/name/nm7161845/", target: "_blank" %>
+    </li>
+    <li>
+      <%= link_to "Infos", informations_path, class: "#{'active' if params[:action].include?('informations')}" %>
+    </li>
+    <li>
+      <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('contact')}" %>
+    </li>
+  </ul>
+</div>

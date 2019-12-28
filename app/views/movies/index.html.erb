@@ -3,7 +3,9 @@
     <div class="col">
       <% @movies.each do |movie| %>
         <div class="movie-card">
-          <%= instance_image_tag movie.photo, height: 300, width: 220, crop: :fill %>
+          <div class="picture">
+            <%= instance_image_tag movie.photo, height: 300, width: 220, crop: :fill %>
+          </div>
           <div class="content">
             <h2><%= movie.title %> (<%= movie.year %>)</h2>
             <% if movie.movie_type? %>
@@ -23,7 +25,9 @@
         </div>
         <div class="movie-card-mobile">
           <div class="movie-data">
-            <%= instance_image_tag movie.photo, height: 150, width: 110, crop: :fill %>
+            <div class="picture">
+              <%= instance_image_tag movie.photo, height: 150, width: 110, crop: :fill %>
+            </div>
             <div class="title">
               <h2><%= movie.title %> (<%= movie.year %>)</h2>
               <% if movie.movie_type? %>
