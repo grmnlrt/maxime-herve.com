@@ -1,5 +1,26 @@
-<ul>
-  <% @games.each do |game| %>
-    <li><%= game.title %></li>
-  <% end %>
-</ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <% @games.each do |game| %>
+        <div class="game-card ">
+
+          <div class="picture">
+            <%= instance_image_tag game.photo, height: 220, width: 325, crop: :fill %>
+          </div>
+          <div class="content">
+            <% if game.developer? %>
+              <p> Développeur: <%= game.developer %></p>
+            <% end %>
+            <% if game.editor? %>
+              <p> Editeur: <%= game.editor %></p>
+            <% end %>
+            <% if game.year? %>
+            <p>date de sortie: <%= game.year %></p>
+            <% end %>
+          </div>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>
