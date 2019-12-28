@@ -1,5 +1,5 @@
 .navbar-mh {
-  display: flex;
+  display: none;
   justify-content: space-between;
   list-style: none;
   padding: 0;
@@ -31,5 +31,9 @@
     &:hover {
       background: $light-gray;
     }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
   }
 }
