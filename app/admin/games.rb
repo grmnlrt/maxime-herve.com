@@ -1,5 +1,11 @@
 ActiveAdmin.register Game do
-  config.filters = false # disabled filters for games
+  menu priority: 2
+  config.filters = false
+  config.per_page = 15
+
+  action_item :view_site do
+    link_to "Go to games page", "/games", target: "_blank"
+  end
 
   index do
     selectable_column
