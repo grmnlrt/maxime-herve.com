@@ -6,7 +6,7 @@ class MessageMailer < ApplicationMailer
   #   en.message_mailer.new.subject
   #
   def new
-    @greeting = "Hi"
+    @message = params[:message]
 
     mail to: "to@example.org"
   end

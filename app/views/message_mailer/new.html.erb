@@ -1,5 +1,7 @@
-<h1>Message#new</h1>
+<p>New message from <strong><%= @message.email %></strong></p>
+
+<p><strong>Subject: <%= @message.subject %></strong></p>
 
 <p>
-  <%= @greeting %>, find me in app/views/message_mailer/new.html.erb
+  <%= @message.content %>
 </p>

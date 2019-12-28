@@ -1,3 +1,6 @@
-Message#new
+New message from <%= @message.email %>
 
-<%= @greeting %>, find me in app/views/message_mailer/new.text.erb
+Subject: <%= @message.subject %>
+
+<%= @message.content %>
+
