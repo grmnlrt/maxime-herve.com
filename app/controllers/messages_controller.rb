@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  invisible_captcha only: :create
+
   def create
     @message = Message.new(message_params)
     if @message.save

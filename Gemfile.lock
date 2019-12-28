@@ -106,6 +106,8 @@ GEM
       has_scope (~> 0.6)
       railties (>= 5.0, < 6.1)
       responders (>= 2, < 4)
+    invisible_captcha (1.0.0)
+      rails (>= 4.2)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     jquery-rails (4.3.5)
@@ -267,6 +269,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass (~> 5.6.1)
+  invisible_captcha
   jbuilder (~> 2.0)
   kaminari
   listen (~> 3.0.5)
