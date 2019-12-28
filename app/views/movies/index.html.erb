@@ -21,6 +21,29 @@
             <p class="synopsis"><%= truncate(movie.synopsis, 480) %></p>
           </div>
         </div>
+        <div class="movie-card-mobile">
+          <div class="movie-data">
+            <%= instance_image_tag movie.photo, height: 300, width: 220 %>
+            <div class="title">
+              <h2><%= movie.title %> (<%= movie.year %>)</h2>
+              <% if movie.movie_type? %>
+                <p class="type"><%= movie.movie_type %></p>
+              <% end %>
+            </div>
+          </div>
+          <div class="content">
+            <% if movie.director? %>
+              <p class="details">De <span><%= movie.director %></span></p>
+            <% end %>
+            <% if movie.casting? %>
+              <p class="details">Avec <span><%= movie.casting %></span></p>
+            <% end %>
+            <% if movie.production? %>
+              <p class="details">Produit par <span><%= movie.production %></span></p>
+            <% end %>
+            <p class="synopsis"><%= movie.synopsis %></p>
+          </div>
+        </div>
       <% end %>
       <div class="pagination">
         <%= link_to_prev_page @movies, 'Previous' %>
