@@ -50,10 +50,19 @@
     right: 8px;
     top: 8px;
     z-index: 5;
+    cursor: pointer;
+
+    div {
+      width: 48px;
+      height: 8px;
+      background: $gray;
+      margin-bottom: 8px;
+      transition: all .3s ease
+    }
   }
 
   .mask {
-    background: rgba(0, 0, 0, .5);
+    background: white;
     top: 0;
     bottom: 0;
     right: 0;
@@ -75,6 +84,10 @@
     transition: margin-left .5s ease;
   }
 
+  li {
+    margin-bottom: 8px;
+  }
+
   a {
     padding: 2px 8px;
     font-size: 2em;
@@ -90,6 +103,20 @@
     .mask {
       position: fixed;
       opacity: 1;
+    }
+
+    .burger {
+      div:nth-child(1) {
+        opacity: 0;
+      }
+
+      div:nth-child(2) {
+        transform: rotate(45deg) translateY(11px);
+      }
+
+      div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-11px);
+      }
     }
   }
 
