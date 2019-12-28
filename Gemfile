@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary', '~> 1.12.0'
+gem 'kaminari'
 gem 'activeadmin'
 
 group :development do
