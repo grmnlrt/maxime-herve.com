@@ -8,6 +8,6 @@ class MessageMailer < ApplicationMailer
   def new
     @message = params[:message]
 
-    mail to: "to@example.org"
+    mail to: AdminUser.find(send_emails: true).email
   end
 end
