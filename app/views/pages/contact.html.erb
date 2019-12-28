@@ -1,1 +1,16 @@
-Todo contact page
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <p>Max Hervé is a music composer for visual media. He started his career in 2013 in Los Angeles, becoming the assistant of Mychael Danna on the movie Transcendence (Johnny Depp, Morgan Freeman).</p>
+      <p>Since 2013, Max has worked with the team at La Hacienda Creative, a studio based in Montreal, as assistant for CEO and creative director Brian d’Oliveira, but also as a composer and music project manager. He has composed the music for many documentaries, TV shows, and worked on video games.</p>
+      <p>Il aime le caca et en mange tous les jours.</p>
+      <%= simple_form_for @message do |f| %>
+        <%= f.input :email %>
+        <%= f.input :subject %>
+        <%= f.input :content %>
+        <%= f.submit "Send message" %>
+      <% end %>
+    </div>
+    <div class="col-xs-12 col-md-6">TODO: add picture</div>
+  </div>
+</div>

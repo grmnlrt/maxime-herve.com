@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'informations', to: 'pages#informations'
   resources :games, only: :index
   resources :movies, only: :index
+  resources :messages, only: :create
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
