@@ -1,11 +1,46 @@
 .game-card{
-    margin : 2rem;
+    margin : auto;
+    margin-bottom: 3rem;
     max-width: 800px;
     max-height: 220px;
     display: flex;
-    background-color: yellow ;
+
+
   .picture{
-    height: 220px;
-    width : 325px;
+    height: 200px;
+    width : 315px;
   }
+
+  img{
+    object-fit: cover;
+  }
+
+}
+
+.game-content{
+  margin-left: 1rem;
+  font-size: $body-font;
+  font-size: 16px;
+  font-weight: 400;
+
+  h4{
+    font-size: 20px;
+    font-family: $headers-font;
+    margin-bottom: 1,5rem;
+  }
+
+  p{
+    margin: 0;
+  }
+  span{
+      color: gray;
+      font-weight: 300;
+    }
+
+}
+
+.game-published{
+
+  padding-top: 1rem;
+  font-size : 12px ;
 }

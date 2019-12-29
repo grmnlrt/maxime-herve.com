@@ -24,10 +24,11 @@ ActiveAdmin.register Game do
     actions
   end
 
-  permit_params :title, :developer, :editor, :role, :year, :link, :photo
+  permit_params :title, :developer, :editor, :role, :year, :franchise, :genre, :link, :photo
   form title: 'Game' do |f|
     inputs "Contenu" do
       f.input :title
+      f.input :franchise
       f.input :year
       f.input :genre
       f.input :editor

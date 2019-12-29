@@ -5,17 +5,24 @@
         <div class="game-card ">
 
           <div class="picture">
-            <%= instance_image_tag game.photo, height: 220, width: 325, crop: :fill %>
+            <%= instance_image_tag game.photo, height: 200, width: 315, crop: :fill %>
           </div>
-          <div class="content">
+          <div class="game-content">
+            <h4><%= game.title %></h4>
             <% if game.developer? %>
-              <p> Développeur: <%= game.developer %></p>
+              <p><span>Développeur </span><%= game.developer %></p>
             <% end %>
             <% if game.editor? %>
-              <p> Editeur: <%= game.editor %></p>
+              <p><span>Editeur </span><%= game.editor %></p>
+            <% end %>
+            <% if game.franchise? %>
+            <p><span>Franchise </span><%= game.franchise %> </p>
+            <% end %>
+            <% if game.genre? %>
+              <p><span>Genre </span> <%= game.genre %></p>
             <% end %>
             <% if game.year? %>
-            <p>date de sortie: <%= game.year%></p>
+              <p class="game-published"><span>date de sortie </span> <%= game.year%></p>
             <% end %>
           </div>
         </div>
