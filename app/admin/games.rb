@@ -29,6 +29,7 @@ ActiveAdmin.register Game do
     inputs "Contenu" do
       f.input :title
       f.input :year
+      f.input :genre
       f.input :editor
       f.input :developer
       f.input :role
