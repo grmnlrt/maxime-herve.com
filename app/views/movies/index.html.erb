@@ -33,6 +33,9 @@
             <% if movie.production? %>
               <p class="details">Produced by <span><%= movie.production %></span></p>
             <% end %>
+            <% if movie.informations? %>
+              <div class="rewards"><%= simple_format movie.informations %></div>
+            <% end %>
           </div>
         </div>
         <div class="movie-card-mobile">
@@ -69,6 +72,9 @@
             <% end %>
             <% if movie.production? %>
               <p class="details">Produced by <span><%= movie.production %></span></p>
+            <% end %>
+            <% if movie.informations? %>
+              <div class="rewards"><%= simple_format movie.informations %></div>
             <% end %>
           </div>
         </div>
