@@ -25,31 +25,33 @@
             <% end %>
           </div>
         </div>
-        <!-- Start Mobile Mersion -->
         <div class="game-card-mobile">
-          <div class="picture">
+          <div class="picture-mobile">
             <%= instance_image_tag game.photo, effect:"gradient_fade,y_-0.5,b_rgb:050505", crop: :fill%>
-            <h4><%= game.title%></h4>
+            <h4><%= truncate(game.title,19)%></h4>
           </div>
           <div class="game-content-mobile">
-            <% if game.year? %>
-              <p class="game-published"><span>date de parution </span><%= game.year%></p>
-            <% end %>
-            <% if game.developer? %>
-              <p><span>Développeur </span><%= game.developer %></p>
-            <% end %>
-            <% if game.editor? %>
-              <p><span>Editeur </span><%= game.editor %></p>
-            <% end %>
-            <% if game.franchise? %>
-            <p><span>Franchise </span><%= game.franchise %></p>
-            <% end %>
-            <% if game.genre? %>
-              <p><span>Genre </span><%= game.genre %></p>
+              <% if game.title? %>
+                <p class="title-mobile"><%= game.title %></p>
+              <% end %>
+              <% if game.franchise? %>
+              <p><span>Franchise </span><%= game.franchise %></p>
+              <% end %>
+              <% if game.developer? %>
+                <p><span>Développeur </span><%= game.developer %></p>
+              <% end %>
+              <% if game.editor? %>
+                <p><span>Editeur </span><%= game.editor %></p>
+              <% if game.genre? %>
+                <p><span>Genre </span><%= game.genre %></p>
+              <% end %>
+              <% if game.year? %>
+                <p class="game-published"><span>date de parution </span><%= game.year%></p>
+              <% end %>
+
             <% end %>
           </div>
         </div>
-        <!-- End Mobile Version -->
       <% end %>
     </div>
   </div>
