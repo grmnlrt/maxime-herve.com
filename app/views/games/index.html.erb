@@ -14,9 +14,6 @@
             <% if game.editor? %>
               <p><span>Editeur </span><%= game.editor %></p>
             <% end %>
-            <% if game.franchise? %>
-            <p><span>Franchise </span><%= game.franchise %></p>
-            <% end %>
             <% if game.genre? %>
               <p><span>Genre </span><%= game.genre %></p>
             <% end %>
@@ -33,9 +30,6 @@
           <div class="game-content-mobile">
               <% if game.title? %>
                 <p class="title-mobile"><%= game.title %></p>
-              <% end %>
-              <% if game.franchise? %>
-              <p><span>Franchise </span><%= game.franchise %></p>
               <% end %>
               <% if game.developer? %>
                 <p><span>Développeur </span><%= game.developer %></p>
