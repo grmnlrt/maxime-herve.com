@@ -14,9 +14,6 @@
             <% if game.editor? %>
               <p><span>Editor </span><%= game.editor %></p>
             <% end %>
-            <% if game.genre? %>
-              <p><span>Genre </span><%= game.genre %></p>
-            <% end %>
             <% if game.year? %>
               <p class="game-published"><span>Release date </span><%= game.year%></p>
             <% end %>
@@ -36,13 +33,9 @@
               <% end %>
               <% if game.editor? %>
                 <p><span>Editor </span><%= game.editor %></p>
-              <% if game.genre? %>
-                <p><span>Genre </span><%= game.genre %></p>
-              <% end %>
               <% if game.year? %>
                 <p class="game-published"><span>Release date </span><%= game.year%></p>
               <% end %>
-
             <% end %>
           </div>
         </div>
