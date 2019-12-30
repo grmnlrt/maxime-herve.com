@@ -1,6 +1,11 @@
 ActiveAdmin.register Movie do
+  menu priority: 1
   config.filters = false
   config.per_page = 15
+
+  action_item :view_site do
+    link_to "Go to movies page", "/movies", target: "_blank"
+  end
 
   index do
     selectable_column

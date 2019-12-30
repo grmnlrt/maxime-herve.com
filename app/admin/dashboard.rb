@@ -1,6 +1,14 @@
 ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
 
+  action_item :view_site do
+    link_to "Go to Homepage", "/", target: "_blank"
+  end
+
+  ActiveAdmin.setup do |config|
+    config.comments = false
+  end
+
   content title: proc { I18n.t("active_admin.dashboard") } do
     ActiveAdmin.setup do |config|
       config.namespace :admin do |admin|
@@ -31,6 +39,5 @@ ActiveAdmin.register_page "Dashboard" do
         end
       end
     end
-
   end
 end

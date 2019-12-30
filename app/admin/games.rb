@@ -1,5 +1,11 @@
 ActiveAdmin.register Game do
-  config.filters = false # disabled filters for games
+  menu priority: 2
+  config.filters = false
+  config.per_page = 15
+
+  action_item :view_site do
+    link_to "Go to games page", "/games", target: "_blank"
+  end
 
   index do
     selectable_column
@@ -18,11 +24,12 @@ ActiveAdmin.register Game do
     actions
   end
 
-  permit_params :title, :developer, :editor, :role, :year, :link, :photo
+  permit_params :title, :developer, :editor, :role, :year, :franchise, :genre, :link, :photo
   form title: 'Game' do |f|
     inputs "Contenu" do
       f.input :title
       f.input :year
+      f.input :genre
       f.input :editor
       f.input :developer
       f.input :role

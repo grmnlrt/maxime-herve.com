@@ -68,10 +68,11 @@ ActiveRecord::Schema.define(version: 2019_12_30_145923) do
     t.string "developer"
     t.string "editor"
     t.string "role"
-    t.integer "year"
+    t.string "year"
     t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "genre"
   end
 
   create_table "messages", force: :cascade do |t|
