@@ -3,7 +3,25 @@
     margin: 0;
   }
 
-  .details, .synopsis {
+  a {
+    text-decoration: none;
+    color: $gray;
+
+    img {
+      transition: transform .3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .picture {
+    overflow: hidden;
+    min-width: fit-content;
+  }
+
+  .details, .rewards {
     font-weight: 300;
     margin: 0;
 
@@ -25,7 +43,7 @@
     font-size: .8em;
   }
 
-  .synopsis {
+  .rewards {
     margin-top: 12px;
     font-size: 0.9em;
   }
@@ -39,8 +57,8 @@
   margin-bottom: 48px;
   display: none;
 
-  img {
-    width: 220px !important;
+  .picture {
+    width: 220px;
     height: 300px;
   }
 
@@ -72,8 +90,8 @@
     margin-left: 8px;
   }
 
-  img {
-    width: 110px !important;
+  .picture {
+    width: 110px;
     height: 150px;
   }
 

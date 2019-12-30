@@ -1,8 +1,28 @@
-.navbar-mh {
-  display: flex;
-  justify-content: space-between;
+.navbar-mh, .mobile-menu-mh ul {
   list-style: none;
   padding: 0;
+
+  a {
+    text-decoration: none;
+    font-family: $headers-font;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $gray;
+
+    &.active {
+      background: $gray !important;
+      color: white;
+    }
+
+    &:hover {
+      background: $light-gray;
+    }
+  }
+}
+
+.navbar-mh {
+  display: none;
+  justify-content: space-between;
   max-width: 800px;
   margin: auto;
   border-bottom: $gray solid 2px;
@@ -17,19 +37,90 @@
     padding: 8px 16px;
     display: flex;
     justify-content: center;
-    color: $gray;
-    text-decoration: none;
-    font-family: $navbar-font;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  }
 
-    &.active {
-      background: $gray !important;
-      color: white;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.mobile-menu-mh {
+  .burger {
+    position: fixed;
+    right: 12px;
+    top: 12px;
+    z-index: 5;
+    cursor: pointer;
+
+    div {
+      width: 48px;
+      height: 8px;
+      background: $gray;
+      margin-bottom: 8px;
+      transition: all .3s ease
+    }
+  }
+
+  .mask {
+    background: white;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .5s ease;
+  }
+
+  ul {
+    position: fixed;
+    z-index: 2;
+    margin: 0;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    padding: 32px;
+    margin-left: -80%;
+    transition: margin-left .5s ease;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    padding: 2px 8px;
+    font-size: 2em;
+  }
+
+  &.show {
+    display: block;
+
+    ul {
+      margin-left: 0;
     }
 
-    &:hover {
-      background: $light-gray;
+    .mask {
+      position: fixed;
+      opacity: 1;
     }
+
+    .burger {
+      div:nth-child(1) {
+        opacity: 0;
+      }
+
+      div:nth-child(2) {
+        transform: rotate(45deg) translateY(11px);
+      }
+
+      div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-11px);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }
