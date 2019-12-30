@@ -1,4 +1,9 @@
 .game-card{
+  @media (max-width: 768px) {
+    display: none,
+
+  }
+
     margin : auto;
     margin-bottom: 3rem;
     max-width: 800px;
@@ -17,7 +22,7 @@
 
 }
 
-.game-content{
+.game-content, .game-content-mobile{
   margin-left: 1rem;
   font-size: $body-font;
   font-size: 16px;
@@ -43,4 +48,13 @@
 
   padding-top: 1rem;
   font-size : 12px ;
+}
+
+.game-card-mobile{
+
+  @media (min-width: 768px){
+  display: none,
+
+  }
+
 }

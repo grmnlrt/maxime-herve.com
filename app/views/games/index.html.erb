@@ -3,7 +3,6 @@
     <div class="col">
       <% @games.each do |game| %>
         <div class="game-card ">
-
           <div class="picture">
             <%= instance_image_tag game.photo, height: 200, width: 315, crop: :fill %>
           </div>
@@ -16,18 +15,46 @@
               <p><span>Editeur </span><%= game.editor %></p>
             <% end %>
             <% if game.franchise? %>
-            <p><span>Franchise </span><%= game.franchise %> </p>
+            <p><span>Franchise </span><%= game.franchise %></p>
             <% end %>
             <% if game.genre? %>
-              <p><span>Genre </span> <%= game.genre %></p>
+              <p><span>Genre </span><%= game.genre %></p>
             <% end %>
             <% if game.year? %>
-              <p class="game-published"><span>date de sortie </span> <%= game.year%></p>
+              <p class="game-published"><span>date de parution </span><%= game.year%></p>
             <% end %>
           </div>
         </div>
-
       <% end %>
+      <!-- Start Mobile Mersion -->
+      <h1>temporaire magueule</h1>
+      <% @game = Game.first %>
+      <!-- Style -->
+      <div class="game-card-mobile">
+        <h4><%= @game.title%></h4>
+        <% if @game.year? %>
+          <p class="game-published"><span>date de parution </span><%= @game.year%></p>
+        <% end %>
+        <div class="picture">
+          <%= instance_image_tag @game.photo, height: 200, width: 315, crop: :fill %>
+        </div>
+        <div class="game-content-mobile">
+          <% if @game.developer? %>
+            <p><span>Développeur </span><%= @game.developer %></p>
+          <% end %>
+          <% if @game.editor? %>
+            <p><span>Editeur </span><%= @game.editor %></p>
+          <% end %>
+          <% if @game.franchise? %>
+          <p><span>Franchise </span><%= @game.franchise %></p>
+          <% end %>
+          <% if @game.genre? %>
+            <p><span>Genre </span><%= @game.genre %></p>
+          <% end %>
+
+        </div>
+      </div>
+      <!-- End Mobile Version -->
     </div>
   </div>
 </div>
