@@ -4,7 +4,7 @@
 
   a {
     text-decoration: none;
-    font-family: $navbar-font;
+    font-family: $headers-font;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: $gray;
@@ -44,7 +44,20 @@
   }
 }
 
+// for mobile container
+.container-fluid, .container {
+  @media (max-width: 768px) {
+    padding-top: 64px;
+  }
+}
+
 .mobile-menu-mh {
+  height: 64px;
+  position: fixed;
+  background: white;
+  width: 100%;
+  z-index: 3;
+
   .burger {
     position: fixed;
     right: 12px;

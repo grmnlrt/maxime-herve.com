@@ -3,7 +3,25 @@
     margin: 0;
   }
 
-  .details, .synopsis {
+  a {
+    text-decoration: none;
+    color: $gray;
+
+    img {
+      transition: transform .3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .picture {
+    overflow: hidden;
+    min-width: fit-content;
+  }
+
+  .details, .rewards {
     font-weight: 300;
     margin: 0;
 
@@ -25,7 +43,7 @@
     font-size: .8em;
   }
 
-  .synopsis {
+  .rewards {
     margin-top: 12px;
     font-size: 0.9em;
   }

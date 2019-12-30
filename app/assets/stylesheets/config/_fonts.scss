@@ -1,10 +1,9 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300,400,700|Oswald:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:300,400,700&display=swap');
 
 // Define fonts for body and headers
 $body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Raleway", "Helvetica", "sans-serif";
-$navbar-font: "Oswald", "Helvetica", "sans-serif";
+$headers-font: "Lora", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

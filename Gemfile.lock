@@ -53,6 +53,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     arbre (1.2.1)
       activesupport (>= 3.0.0)
     arel (9.0.0)
@@ -106,6 +108,8 @@ GEM
       has_scope (~> 0.6)
       railties (>= 5.0, < 6.1)
       responders (>= 2, < 4)
+    invisible_captcha (1.0.0)
+      rails (>= 4.2)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     jquery-rails (4.3.5)
@@ -124,6 +128,10 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.7.0)
+      launchy (~> 2.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -159,6 +167,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
+    public_suffix (4.0.2)
     puma (4.3.1)
       nio4r (~> 2.0)
     rack (2.0.8)
@@ -209,6 +218,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    ruby_http_client (3.3.0)
     sassc (2.2.1)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -217,6 +227,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    sendgrid-ruby (6.0.0)
+      ruby_http_client (~> 3.3.0)
     simple_form (5.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -267,8 +279,10 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass (~> 5.6.1)
+  invisible_captcha
   jbuilder (~> 2.0)
   kaminari
+  letter_opener
   listen (~> 3.0.5)
   pg (~> 0.21)
   pry-byebug
@@ -277,6 +291,7 @@ DEPENDENCIES
   rails (= 5.2.3)
   redis
   sassc-rails
+  sendgrid-ruby
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
