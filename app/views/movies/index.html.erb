@@ -7,9 +7,12 @@
             <%= instance_image_tag movie.photo, height: 300, width: 220, crop: :fill %>
           </div>
           <div class="content">
-            <h2><%= movie.title %> (<%= movie.year %>)</h2>
-            <% if movie.movie_type? %>
-              <p class="type"><%= movie.movie_type %></p>
+            <h2><%= movie.title %></h2>
+            <% if movie.movie_type? || movie.genre? %>
+              <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
+            <% end %>
+            <% if movie.year? %>
+              <p class="details">Release in <span><%= movie.year %></span></p>
             <% end %>
             <% if movie.director? %>
               <p class="details">Directed by <span><%= movie.director %></span></p>
