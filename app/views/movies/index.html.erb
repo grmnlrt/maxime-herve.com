@@ -4,10 +4,20 @@
       <% @movies.each do |movie| %>
         <div class="movie-card">
           <div class="picture">
-            <%= instance_image_tag movie.photo, height: 300, width: 220, crop: :fill %>
+            <% if movie.link? %>
+              <%= link_to movie.link, target: "_blank" do %>
+                <%= instance_image_tag movie.photo, height: 300, width: 220, crop: :fill %>
+              <% end %>
+            <% else %>
+              <%= instance_image_tag movie.photo, height: 300, width: 220, crop: :fill %>
+            <% end %>
           </div>
           <div class="content">
-            <h2><%= movie.title %></h2>
+            <% if movie.link? %>
+              <h2><%= link_to movie.title, movie.link, target: "_blank" %></h2>
+            <% else %>
+              <h2><%= movie.title %></h2>
+            <% end %>
             <% if movie.movie_type? || movie.genre? %>
               <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
             <% end %>
@@ -28,16 +38,29 @@
         <div class="movie-card-mobile">
           <div class="movie-data">
             <div class="picture">
-              <%= instance_image_tag movie.photo, height: 150, width: 110, crop: :fill %>
+              <% if movie.link? %>
+                <%= link_to movie.link, target: "_blank" do %>
+                  <%= instance_image_tag movie.photo, height: 150, width: 110, crop: :fill %>
+                <% end %>
+              <% else %>
+                <%= instance_image_tag movie.photo, height: 150, width: 110, crop: :fill %>
+              <% end %>
             </div>
             <div class="title">
-              <h2><%= movie.title %> (<%= movie.year %>)</h2>
-              <% if movie.movie_type? %>
-                <p class="type"><%= movie.movie_type %></p>
+              <% if movie.link? %>
+                <h2><%= link_to movie.title, movie.link, target: "_blank" %></h2>
+              <% else %>
+                <h2><%= movie.title %></h2>
+              <% end %>
+              <% if movie.movie_type? || movie.genre? %>
+                <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
               <% end %>
             </div>
           </div>
           <div class="content">
+            <% if movie.year? %>
+              <p class="details">Release in <span><%= movie.year %></span></p>
+            <% end %>
             <% if movie.director? %>
               <p class="details">Directed by <span><%= movie.director %></span></p>
             <% end %>
