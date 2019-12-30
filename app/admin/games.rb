@@ -28,7 +28,6 @@ ActiveAdmin.register Game do
   form title: 'Game' do |f|
     inputs "Contenu" do
       f.input :title
-      f.input :franchise
       f.input :year
       f.input :genre
       f.input :editor
