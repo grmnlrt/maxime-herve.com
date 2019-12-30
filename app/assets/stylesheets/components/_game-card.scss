@@ -3,11 +3,11 @@
     display: none;
   }
 
-    margin : auto;
-    margin-bottom: 24px;
-    max-width: 800px;
-    max-height: 220px;
-    display: flex;
+  margin : auto;
+  margin-bottom: 24px;
+  max-width: 800px;
+  max-height: 220px;
+  display: flex;
 
   .picture {
     height: 200px;
@@ -19,7 +19,6 @@
     height: 200px;
     width: 315px;
     object-fit: cover;
-    border-radius: 3px;
   }
 
 }
@@ -61,7 +60,6 @@
     height: 350px;
     margin-bottom: 16px;
     object-fit: cover;
-    border-radius: 3px;
   }
 
 

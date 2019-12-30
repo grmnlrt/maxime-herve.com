@@ -9,16 +9,16 @@
           <div class="game-content">
             <h4><%= game.title %></h4>
             <% if game.developer? %>
-              <p><span>Développeur </span><%= game.developer %></p>
+              <p><span>Developer </span><%= game.developer %></p>
             <% end %>
             <% if game.editor? %>
-              <p><span>Editeur </span><%= game.editor %></p>
+              <p><span>Editor </span><%= game.editor %></p>
             <% end %>
             <% if game.genre? %>
               <p><span>Genre </span><%= game.genre %></p>
             <% end %>
             <% if game.year? %>
-              <p class="game-published"><span>date de parution </span><%= game.year%></p>
+              <p class="game-published"><span>Release date </span><%= game.year%></p>
             <% end %>
           </div>
         </div>
@@ -32,15 +32,15 @@
                 <p class="title-mobile"><%= game.title %></p>
               <% end %>
               <% if game.developer? %>
-                <p><span>Développeur </span><%= game.developer %></p>
+                <p><span>Developer </span><%= game.developer %></p>
               <% end %>
               <% if game.editor? %>
-                <p><span>Editeur </span><%= game.editor %></p>
+                <p><span>Editor </span><%= game.editor %></p>
               <% if game.genre? %>
                 <p><span>Genre </span><%= game.genre %></p>
               <% end %>
               <% if game.year? %>
-                <p class="game-published"><span>date de parution </span><%= game.year%></p>
+                <p class="game-published"><span>Release date </span><%= game.year%></p>
               <% end %>
 
             <% end %>
