@@ -1,6 +1,6 @@
-.game-card{
+.game-card {
   @media (max-width: 768px) {
-    display: none,
+    display: none;
   }
 
     margin : auto;
@@ -9,90 +9,89 @@
     max-height: 220px;
     display: flex;
 
-
-  .picture{
+  .picture {
     height: 200px;
     width : 315px;
   }
 
-  img{
+  img {
+    height: 200px;
+    width: 315px;
     object-fit: cover;
     border-radius: 3px;
   }
 
 }
 
-.game-content, .game-content-mobile{
+.game-content, .game-content-mobile {
   margin-left: 1rem;
-  font-size: $body-font;
   font-size: 16px;
   font-weight: 400;
 
-  h4{
+  h4 {
     font-size: 20px;
-    font-family: $headers-font;
     margin-bottom: 1,5rem;
   }
 
-  p{
+  p {
     margin: 0;
   }
-  span{
+
+  span {
       color: gray;
       font-weight: 300;
     }
 
 }
 
-.game-published{
-
+.game-published {
   padding: 1rem 0px;
-
-  font-size : 12px ;
+  font-size : 12px;
 }
 
-.game-card-mobile{
+.game-card-mobile {
   background: $lightest-gray;
 
   @media (min-width: 768px){
     display: none;
   }
 
-  }
-  .game-content-mobile{
-
+}
+  .game-content-mobile {
     margin-top: 20px;
     margin-bottom: 80px;
   }
 
-  img{
+  img {
     width : 95%;
     height: 350px;
     margin: 15px;
     object-fit: cover;
     border-radius: 3px;
   }
-  .picture-mobile{
+
+  .picture-mobile {
     height: 350px;
   }
 
-  .title-mobile{
+  .title-mobile {
     padding: 10px 0px;
   }
 
-h4{
+  .title-inside-mobile {
   color: #f2f2f2;
   text-shadow: 0px 1px 5px #a7a7a7;
   position: relative;
   left: 25px;
   bottom: 50px;
-}
+  }
 
-  @media (max-width:450px){
-    img{
+  @media (max-width:450px) {
+    img {
       max-height: 300px;
     }
-    .picture-mobile{
+
+    .picture-mobile {
       max-height: 300px;
     }
 }

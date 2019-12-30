@@ -28,7 +28,7 @@
         <div class="game-card-mobile">
           <div class="picture-mobile">
             <%= instance_image_tag game.photo, effect:"gradient_fade,y_-0.5,b_rgb:050505", crop: :fill%>
-            <h4><%= truncate(game.title,19)%></h4>
+            <h4 class="title-inside-mobile"><%= truncate(game.title,19)%></h4>
           </div>
           <div class="game-content-mobile">
               <% if game.title? %>
