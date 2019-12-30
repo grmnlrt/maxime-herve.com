@@ -45,7 +45,7 @@
 }
 
 // for mobile container
-.container-fluid {
+.container-fluid, .container {
   @media (max-width: 768px) {
     padding-top: 64px;
   }
