@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>We're sorry, but something went wrong (500)</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>
-      .error-page {
-        margin: 100px 0 40px;
-        text-align: center;
-      }
+<head>
+  <title>We're sorry, but something went wrong (500)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #fafafa;
+      color: #0E0000;
+     }
 
-      .error-page__header-image {
-        width: 112px;
-      }
+     .error-page {
+      margin: 100px 0 40px;
+      text-align: center;
+     }
 
-      .error-page__title {
-        font-size: 32px;
-        margin-bottom: 16px;
-      }
+     .error-page__message {
+      margin-bottom: 32px;
+     }
 
-      .button {
-        text-decoration: none;
-        text-align: center;
-        padding: 16px 32px;
-        width: 75px;
-        background-color: #0E0000;
-        color: rgb(240,240,240);
-      }
-    </style>
-  </head>
-  <body class="rails-default-error-page">
-    <div class="error-page">
-     <header class="error-page__header">
-       <img class="error-page__header-image" src="logo_max-herve.png" alt="Max Herve">
-       <h1 class="error-page__title nolinks">Error</h1>
-     </header>
-       <p class="error-page__message">We're sorry, something went wrong. We are on it !</p>
-       <br>
-       <br>
-       <a class="button" href="/">Homepage</a>
-     </div>
+     .error-page__header-image {
+      width: 112px;
+      margin-bottom: 32px;
+     }
+
+     .error-page__title {
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 32px;
+     }
+
+    .button {
+      text-decoration: none;
+      text-align: center;
+      padding: 16px 32px;
+      width: 75px;
+      background-color: #0E0000;
+      color: rgb(240,240,240);
+      transition: all 0.5s;
+      border : solid 2px #0E0000;
+    }
+
+    .button:hover {
+      background-color :rgb(240,240,240);
+      color: #0E0000;
+      border : solid 2px #0E0000;
+    }
+  </style>
+</head>
+<body class="rails-default-error-page">
+   <div class="error-page">
+    <header class="error-page__header">
+      <img class="error-page__header-image" src="logo_max-herve.png" alt="Max Herve">
+      <h1 class="error-page__title nolinks">An error happened.</h1>
+    </header>
+      <p class="error-page__message">We're sorry, something went wrong. We are on it!</p>
+      <br>
+      <br>
+      <a class="button" href="/">Homepage</a>
+    </div>
   </body>
+</body>
 </html>
