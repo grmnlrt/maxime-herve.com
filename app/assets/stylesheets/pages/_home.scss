@@ -4,4 +4,30 @@
   align-items: center;
   background: $gray;
   height: 100vh;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 32px;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 4px;
+      background: white;
+      transition: width .3s ease;
+      margin: auto;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
 }
