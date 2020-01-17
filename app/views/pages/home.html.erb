@@ -1,6 +1,6 @@
-<div id="homepage">
-  <%= link_to "Movies", movies_path %>
-  <%= link_to "Games", games_path %>
+<div id="homepage" data-controller="homepage">
+  <%= link_to "Movies", movies_path, data: { action: 'mouseover->css#addClass', target: 'homepage.category'} %>
+  <%= link_to "Games", games_path, data: { action: 'mouseover->css#addClass', target: 'homepage.category'} %>
 </div>
 
 

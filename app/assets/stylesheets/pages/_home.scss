@@ -3,9 +3,15 @@
   justify-content: space-around;
   align-items: center;
   background: $gray;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+
+  &.movies {
+    background-image: asset-url('mh-001.jpg')
   }
 
   a {
