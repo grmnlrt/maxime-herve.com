@@ -1,17 +1,21 @@
 #homepage {
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  background: $gray;
+  background-image: linear-gradient($gray, $gray);
   background-size: cover;
   background-position: center;
+  display: flex;
   height: 100vh;
+  justify-content: space-around;
   @media (max-width: 768px) {
     flex-direction: column;
   }
 
   &.movies {
     background-image: asset-url('mh-001.jpg')
+  }
+
+  &.games {
+    background-image: asset-url('mh-002.jpg')
   }
 
   a {

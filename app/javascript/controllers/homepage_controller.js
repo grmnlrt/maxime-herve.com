@@ -1,9 +1,8 @@
 import { Controller } from 'stimulus';
 
 export default class extends Controller {
-  static targets = ['category']
 
-  toggleClass() {
-    this.element.classList.toggle(this.className);
+  toggleClass(event) {
+    this.element.classList.toggle(event.currentTarget.dataset.className);
   }
 }
