@@ -26,16 +26,17 @@ ActiveAdmin.register Movie do
 
   permit_params :photo, :title, :director, :production, :genre, :movie_type,
                 :year, :link, :synopsis, :casting, :informations, :priority,
-                :as_assistant
+                :as_assistant, :published
 
   form title: 'Movie' do |f|
     inputs "Infos" do
       input :title
+      input :published, label: "Movie Published"
       input :year
       input :genre
       input :movie_type
       input :informations
-      input :as_assistant
+      input :as_assistant, label: "worked as an assistant"
       input :priority, collection: Movie::PRIORITY, include_blank: false
     end
     inputs "Synopsis" do
