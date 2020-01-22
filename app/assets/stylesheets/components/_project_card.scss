@@ -1,4 +1,4 @@
-.movie-card, .movie-card-mobile {
+.project-card, .project-card-mobile {
   h2 {
     margin: 0;
   }
@@ -49,7 +49,7 @@
   }
 }
 
-.movie-card {
+.project-card {
   max-width: 800px;
   margin: auto;
   max-height: 300px;
@@ -75,12 +75,12 @@
   }
 }
 
-.movie-card-mobile {
+.project-card-mobile {
   background: $lightest-gray;
   padding: 8px;
   margin-bottom: 32px;
 
-  .movie-data {
+  .project-data {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
