@@ -22,7 +22,7 @@
               <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
             <% end %>
             <% if movie.year? %>
-              <p class="details">Release in <span><%= movie.year %></span></p>
+              <p class="details"><span><%= movie.year %></span></p>
             <% end %>
             <% if movie.director? %>
               <p class="details">Directed by <span><%= movie.director %></span></p>
@@ -62,7 +62,7 @@
           </div>
           <div class="content">
             <% if movie.year? %>
-              <p class="details">Release in <span><%= movie.year %></span></p>
+              <p class="details"><span><%= movie.year %></span></p>
             <% end %>
             <% if movie.director? %>
               <p class="details">Directed by <span><%= movie.director %></span></p>

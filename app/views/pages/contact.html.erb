@@ -1,19 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-6">
-      <p>Max Hervé is a music composer for visual media. He started his career in 2013 in Los Angeles, becoming the assistant of Mychael Danna on the movie Transcendence (Johnny Depp, Morgan Freeman).</p>
-      <p>Since 2013, Max has worked with the team at La Hacienda Creative, a studio based in Montreal, as assistant for CEO and creative director Brian d’Oliveira, but also as a composer and music project manager. He has composed the music for many documentaries, TV shows, and worked on video games.</p>
-      <p>Il aime le caca et en mange tous les jours.</p>
-      <h2 class="h4">Awards</h2>
-      <h2 class="h4">Contact</h2>
+      <h1 class="h4 mb-4">Contact</h1>
       <%= simple_form_for @message do |f| %>
         <%= invisible_captcha %>
         <%= f.input :email, label: false, placeholder: "your@email.com" %>
-        <%= f.input :subject, label: false, placeholder: "Enter your subject here" %>
+        <%= f.input :subject, label: false, placeholder: "Type the object of your message here" %>
         <%= f.input :content, label: false, placeholder: "Type your message here" %>
-        <%= f.submit "Send message" %>
+        <div class="d-flex justify-content-end">
+          <%= f.submit "Send message", class: "btn btn-default" %>
+        </div>
       <% end %>
+      <hr>
+      <p>For <strong>video games</strong> purpose: <a href = "mailto: contact@g4f.fr">contact@g4f.fr</a></p>
     </div>
-    <div class="col-xs-12 col-md-6">TODO: add picture</div>
+    <div class="col-xs-12 col-md-6">
+      <%= image_tag "maxime_herve_contact.jpg", width: "100%" %>
+    </div>
   </div>
 </div>

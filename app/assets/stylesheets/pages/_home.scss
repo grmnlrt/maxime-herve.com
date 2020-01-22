@@ -1,13 +1,25 @@
 #homepage {
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding: 10%;
-  background: $gray;
+  background-image: linear-gradient($gray, $gray);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  &.movies {
+    background-image: asset-url('mh-001-bis.png')
+  }
+
+  &.games {
+    background-image: asset-url('mh-002-bis.png')
+  }
 
   a {
-    z-index: 2;
-    color: $gray;
+    color: white;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 2em;
@@ -19,26 +31,13 @@
       display: block;
       width: 0;
       height: 4px;
-      background: $gray;
+      background: white;
       transition: width .3s ease;
       margin: auto;
     }
 
     &:hover:after {
       width: 100%;
-    }
-  }
-
-  canvas {
-    position: absolute;
-    filter: grayscale(1);
-    // opacity: 0;
-    transition: opacity .3s ease;
-  }
-
-  &.active {
-    canvas {
-      opacity: 1;
     }
   }
 }
