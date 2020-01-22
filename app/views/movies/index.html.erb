@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <% @movies.each do |movie| %>
-        <div class="movie-card">
+        <div class="project-card">
           <div class="picture">
             <% if movie.link? %>
               <%= link_to movie.link, target: "_blank" do %>
@@ -38,8 +38,8 @@
             <% end %>
           </div>
         </div>
-        <div class="movie-card-mobile">
-          <div class="movie-data">
+        <div class="project-card-mobile">
+          <div class="project-data">
             <div class="picture">
               <% if movie.link? %>
                 <%= link_to movie.link, target: "_blank" do %>
