@@ -1,8 +1,6 @@
 #homepage {
   align-items: center;
-  background-image: linear-gradient($gray, $gray);
-  background-size: cover;
-  background-position: center;
+  background: $gray;
   display: flex;
   height: 100vh;
   justify-content: space-around;
@@ -10,12 +8,28 @@
     flex-direction: column;
   }
 
-  &.movies {
-    background-image: asset-url('mh-001-bis.png')
+  .bg {
+    background-size: cover;
+    background-position: center;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .5s ease opacity;
+
+    &.show {
+      opacity: 1;
+    }
   }
 
-  &.games {
-    background-image: asset-url('mh-002-bis.png')
+  .movies {
+    background-image: linear-gradient(220deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), asset-url('mh-001-bis.png');
+  }
+
+  .games {
+    background-image: linear-gradient(40deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), asset-url('mh-002-bis.png');
   }
 
   a {
@@ -25,6 +39,7 @@
     font-size: 2em;
     text-decoration: none;
     padding: 32px;
+    z-index: 2;
 
     &:after {
       content: "";
