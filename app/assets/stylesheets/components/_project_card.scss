@@ -21,7 +21,7 @@
     min-width: fit-content;
   }
 
-  .details, .rewards {
+  .details, .rewards, .role {
     font-weight: 300;
     margin: 0;
 
@@ -43,9 +43,18 @@
     font-size: .8em;
   }
 
-  .rewards {
+  .rewards{
     margin-top: 12px;
     font-size: 0.9em;
+  }
+
+  .role {
+    border: 1px $gray solid;
+    padding: 1px 8px;
+    font-size: 0.8em;
+    margin: 0 0 0 8px;
+    width: fit-content;
+    height: fit-content;
   }
 }
 
