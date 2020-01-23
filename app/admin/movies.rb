@@ -32,11 +32,11 @@ ActiveAdmin.register Movie do
     inputs "Infos" do
       input :title
       input :published, label: "Movie Published"
+      input :as_assistant, label: "worked as an assistant"
       input :year
       input :genre
       input :movie_type
       input :informations
-      input :as_assistant, label: "worked as an assistant"
       input :priority, collection: Movie::PRIORITY, include_blank: false
     end
     inputs "Synopsis" do
