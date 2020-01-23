@@ -18,9 +18,14 @@
             <% else %>
               <h2><%= movie.title %></h2>
             <% end %>
-            <% if movie.movie_type? || movie.genre? %>
-              <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
-            <% end %>
+            <div class="d-flex">
+              <% if movie.movie_type? || movie.genre? %>
+                <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
+              <% end %>
+              <% if movie.as_assistant? %>
+                <p class="role">work as assistant</p>
+              <% end %>
+            </div>
             <% if movie.year? %>
               <p class="details"><span><%= movie.year %></span></p>
             <% end %>
@@ -55,9 +60,14 @@
               <% else %>
                 <h2><%= movie.title %></h2>
               <% end %>
-              <% if movie.movie_type? || movie.genre? %>
-                <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
-              <% end %>
+              <div class="d-flex">
+                <% if movie.movie_type? || movie.genre? %>
+                  <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
+                <% end %>
+                <% if movie.as_assistant? %>
+                  <p class="role">work as assistant</p>
+                <% end %>
+              </div>
             </div>
           </div>
           <div class="content">
