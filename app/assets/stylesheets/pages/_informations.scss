@@ -1,0 +1,51 @@
+.infos-wrapper {
+  max-width: 800px;
+  margin: auto;
+  max-height: 300px;
+  margin-bottom: 48px;
+}
+
+.infos-rewards h1 {
+  padding: 24px 0 16px 0;
+}
+
+.year-awards {
+  display: flex;
+}
+
+.year {
+  padding-right: 48px;
+  font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+  .infos-biography {
+    columns: 2;
+  }
+
+  .infos-rewards ul {
+    padding: 0;
+  }
+
+  .ghost {
+    color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .year-awards {
+    flex-direction: column;
+  }
+
+  .ghost {
+    display: none;
+  }
+
+  .year {
+    margin: 16px 0 8px 0;
+  }
+
+  .infos-rewards ul {
+    padding-left: 16px;
+  }
+}
