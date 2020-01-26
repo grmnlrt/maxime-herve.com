@@ -1,44 +1,47 @@
-.infos-wrapper {
-  max-width: 800px;
-  margin: auto;
-  max-height: 300px;
-  margin-bottom: 48px;
-}
-
 .infos-rewards h1 {
   padding: 24px 0 16px 0;
 }
 
 .year-awards {
   display: flex;
+  align-items: center;
+
+  p {
+    padding: 0 0 0 84px;
+    margin-bottom: 8px;
+  }
 }
 
 .year {
-  padding-right: 48px;
   font-weight: bolder;
+  background-color: $light-gray;
+  padding: 8px;
+}
+
+.paragraph {
+  padding-top: 16px;
+
+  p {
+    padding-left: 32px;
+  }
 }
 
 @media (min-width: 768px) {
   .infos-biography {
-    columns: 2;
-  }
-
-  .infos-rewards ul {
-    padding: 0;
-  }
-
-  .ghost {
-    color: transparent;
+  columns: 2;
   }
 }
 
 @media (max-width: 768px) {
-  .year-awards {
-    flex-direction: column;
+  .infos-rewards h1 {
+    padding: 32px 0 0 0;
   }
 
-  .ghost {
-    display: none;
+  .year-awards {
+    flex-direction: column;
+    p {
+      padding: 0;
+    }
   }
 
   .year {
