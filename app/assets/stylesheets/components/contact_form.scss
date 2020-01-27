@@ -1,0 +1,22 @@
+.contact-form {
+  input[type="email"], input[type="text"], textarea {
+    border: none;
+    background: $lightest-gray;
+    border-radius: 0;
+
+    &:focus {
+      box-shadow: none;
+      background: $lightest-gray;
+      box-shadow: 0 2px 0 $gray;
+    }
+  }
+
+  input[type="email"], input[type="text"] {
+    padding: 24px;
+  }
+
+  textarea {
+    resize: none;
+    padding: 12px 24px;
+  }
+}
