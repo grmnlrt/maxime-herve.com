@@ -22,9 +22,6 @@
               <% if movie.movie_type? || movie.genre? %>
                 <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
               <% end %>
-              <% if movie.as_assistant? %>
-                <p class="role">work as assistant</p>
-              <% end %>
             </div>
             <% if movie.year? %>
               <p class="details"><span><%= movie.year %></span></p>
@@ -37,6 +34,9 @@
             <% end %>
             <% if movie.production? %>
               <p class="details">Produced by <span><%= movie.production %></span></p>
+            <% end %>
+            <% if movie.as_assistant? %>
+              <p class="details">Role <span>Assistant</span></p>
             <% end %>
             <% if movie.informations? %>
               <div class="rewards"><%= simple_format movie.informations %></div>
@@ -64,9 +64,6 @@
                 <% if movie.movie_type? || movie.genre? %>
                   <p class="type"><%= movie.genre %><%= ' / ' if movie.genre? %><%= movie.movie_type %></p>
                 <% end %>
-                <% if movie.as_assistant? %>
-                  <p class="role">work as assistant</p>
-                <% end %>
               </div>
             </div>
           </div>
@@ -82,6 +79,9 @@
             <% end %>
             <% if movie.production? %>
               <p class="details">Produced by <span><%= movie.production %></span></p>
+            <% end %>
+            <% if movie.as_assistant? %>
+              <p class="details">Role <span>Assistant</span></p>
             <% end %>
             <% if movie.informations? %>
               <div class="rewards"><%= simple_format movie.informations %></div>
