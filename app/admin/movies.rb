@@ -33,6 +33,7 @@ ActiveAdmin.register Movie do
       input :title
       input :published, label: "Movie Published"
       input :as_assistant, label: "worked as an assistant"
+      input :composer, label: "Music composer", hint: "Will appear only if you were assistant"
       input :year
       input :genre
       input :movie_type

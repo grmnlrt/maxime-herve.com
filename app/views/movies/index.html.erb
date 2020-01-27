@@ -37,6 +37,7 @@
             <% end %>
             <% if movie.as_assistant? %>
               <p class="details">Role <span>Assistant</span></p>
+              <p class="details">Composer <span><%= movie.composer %></span></p>
             <% end %>
             <% if movie.informations? %>
               <div class="rewards"><%= simple_format movie.informations %></div>
@@ -82,6 +83,7 @@
             <% end %>
             <% if movie.as_assistant? %>
               <p class="details">Role <span>Assistant</span></p>
+              <p class="details">Composer <span><%= movie.composer %></span></p>
             <% end %>
             <% if movie.informations? %>
               <div class="rewards"><%= simple_format movie.informations %></div>
