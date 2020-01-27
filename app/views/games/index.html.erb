@@ -31,7 +31,11 @@
               <p class="details">Edited by <span><%= game.editor %></span></p>
             <% end %>
             <% if game.role? %>
+              <br>
               <p class="details">Role <span><%= game.role %></span></p>
+              <% if game.composer? %>
+                <p class="details">Composer <span><%= game.composer %></span></p>
+              <% end %>
             <% end %>
           </div>
         </div>
@@ -68,7 +72,11 @@
               <p class="details">Edited by <span><%= game.editor %></span></p>
             <% end %>
             <% if game.role? %>
+              <br>
               <p class="details">Role <span><%= game.role %></span></p>
+              <% if game.composer? %>
+                <p class="details">Composer <span><%= game.composer %></span></p>
+              <% end %>
             <% end %>
           </div>
         </div>

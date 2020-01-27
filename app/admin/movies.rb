@@ -26,7 +26,7 @@ ActiveAdmin.register Movie do
 
   permit_params :photo, :title, :director, :production, :genre, :movie_type,
                 :year, :link, :synopsis, :casting, :informations, :priority,
-                :as_assistant, :published
+                :as_assistant, :published, :composer
 
   form title: 'Movie' do |f|
     inputs "Infos" do

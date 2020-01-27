@@ -24,7 +24,9 @@ ActiveAdmin.register Game do
     actions
   end
 
-  permit_params :title, :developer, :editor, :role, :year, :franchise, :genre, :link, :photo
+  permit_params :title, :developer, :editor, :role, :year, :franchise, :genre,
+                :link, :photo, :composer
+
   form title: 'Game' do |f|
     inputs "Contenu" do
       f.input :title
@@ -33,6 +35,7 @@ ActiveAdmin.register Game do
       f.input :editor
       f.input :developer
       f.input :role
+      f.input :composer, label: "Muic composer"
       f.input :link
     end
     inputs "Picture" do
