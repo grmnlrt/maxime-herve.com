@@ -1,7 +1,7 @@
 <div id="homepage" data-controller="homepage">
   <div class="bg movies" data-target="homepage.movies"></div>
   <div class="bg games" data-target="homepage.games"></div>
-  <%= link_to "Movies", movies_path, data: { action: 'mouseover->homepage#toggleMoviesClass mouseout->homepage#toggleMoviesClass' } %>
+  <%= link_to "Films", movies_path, data: { action: 'mouseover->homepage#toggleMoviesClass mouseout->homepage#toggleMoviesClass' } %>
   <%= link_to "Games", games_path, data: { action: 'mouseover->homepage#toggleGamesClass mouseout->homepage#toggleGamesClass' } %>
 </div>
 
