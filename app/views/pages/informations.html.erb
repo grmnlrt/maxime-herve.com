@@ -10,36 +10,13 @@
         </div>
         <div class="infos-rewards">
           <h1 class="h4">REWARDS</h1>
-          <div class="year-awards paragraph">
-            <div class="year">2019</div><p>Nominated for the best score production music track - The Production Music Awards</p>
-          </div>
-          <div class="year-awards paragraph">
-            <span class="year">2017</span><p><strong>Winner at the Lobster’s Films music composition competition</strong> – Gindou Cinéma</p>
-          </div>
-          <div class="year-awards">
-             <p><strong>Winner at the Young Talent Award Media Music</strong> – Media Sound Hamburg</p>
-          </div>
-          <div class="year-awards">
-            <p>Nominated at Paris Art and Movie Awards for the score of <em>Antonin?</em> (directed by Nicolas Legendre)</p>
-          </div>
-          <div class="year-awards">
-            <p>Nominated at the TMC London Film Festival for the score of <em>Antonin?</em> (directed by Nicolas Legendre)</p>
-          </div>
-          <div class="year-awards">
-            <p><strong>Winner at International Monthly Film Festival</strong> for the score of <em>Antonin?</em> (directed by Nicolas Legendre)</p>
-          </div>
-          <div class="year-awards">
-            <p>Semi-finalist at the Los Angeles CineFest for the score of <em>Antonin?</em> (directed by Nicolas Legendre)</p>
-          </div>
-          <div class="year-awards paragraph">
-            <span class="year">2016</span><p>Top 30 finalist among 222 participants at the Oticons Faculty International Film Music Competition</p>
-          </div>
-          <div class="year-awards paragraph">
-            <span class="year">2015</span><p>Nominated at the SABAM Award for Best Young International Composer at the World Soundtrack Award 2015</p>
-          </div>
-          <div class="year-awards">
-            <p><strong>Winner at the Montreal International Film Music Competition 2015 for the music of the movie <em>Segment</em></strong> – also nominated for the music of the movie <em>The Cage</em></p>
-          </div>
+          <% @rewards.each do |reward| %>
+            <div class="award">
+              <p>
+                <span><%= reward.year %></span><%= reward.description %>
+              </p>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>

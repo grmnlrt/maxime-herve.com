@@ -1,26 +1,16 @@
 .infos-rewards h1 {
-  padding: 24px 0 16px 0;
+  margin: 24px 0 16px 0;
 }
 
-.year-awards {
-  display: flex;
-  align-items: center;
+.award {
 
-  p {
-    padding: 0 0 0 84px;
-    margin-bottom: 8px;
+  span {
+    opacity: 0.5;
+    margin-right: 16px;
   }
-}
-
-.year {
-  opacity: 0.6;
-}
-
-.paragraph {
-  padding-top: 16px;
 
   p {
-    padding-left: 32px;
+    margin-bottom: 16px;
   }
 }
 
@@ -30,23 +20,5 @@
   &:first-child {
     padding-top: 0;
     border-bottom: 1px #acacac solid;
-  }
-}
-
-@media (max-width: 768px) {
-  .infos-rewards h1 {
-    padding: 32px 0 0 0;
-  }
-
-  .year-awards {
-    flex-direction: column;
-    p {
-      padding: 0;
-    }
-  }
-
-  .year {
-    margin: 16px 0 8px 0;
-    text-align: center;
   }
 }

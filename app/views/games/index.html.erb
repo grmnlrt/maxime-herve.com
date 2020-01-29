@@ -37,6 +37,9 @@
                 <p class="details">Composer <span><%= game.composer %></span></p>
               <% end %>
             <% end %>
+            <% if game.informations? %>
+              <div class="rewards"><%= simple_format game.informations %></div>
+            <% end %>
           </div>
         </div>
         <div class="project-card-mobile">
