@@ -8,5 +8,6 @@ class PagesController < ApplicationController
 
   def informations
     @rewards = Reward.all
+    @page = Page.find_by(slug: 'informations')
   end
 end
