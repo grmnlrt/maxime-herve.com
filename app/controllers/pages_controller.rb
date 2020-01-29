@@ -7,5 +7,6 @@ class PagesController < ApplicationController
   end
 
   def informations
+    @rewards = Reward.all
   end
 end
