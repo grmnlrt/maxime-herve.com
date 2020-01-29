@@ -8,8 +8,14 @@
   <li>
     <%= link_to "IMDB", "https://www.imdb.com/name/nm7161845/", target: "_blank" %>
   </li>
-  <li>
-    <%= link_to "Spotify", "https://open.spotify.com/artist/2LCWayrRO11GMlRVqnmHpK", target: "_blank" %>
+  <li class="dropdown">
+
+    <%= link_to "Music", "#", id: "musicmenu", data: { toggle: "dropdown" } %>
+    <div class="dropdown-menu" aria-labelledby="musicmenu">
+      <%= link_to "Spotify", "https://open.spotify.com/artist/2LCWayrRO11GMlRVqnmHpK", class: "dropdown-item", target: "_blank" %>
+      <%= link_to "Apple Music", "https://itunes.apple.com/ca/artist/maxime-herv%C3%A9/id1444851749", class: "dropdown-item", target: "_blank" %>
+      <%= link_to "Deezer", "https://www.deezer.com/fr/artist/57169412", class: "dropdown-item", target: "_blank" %>
+    </div>
   </li>
   <li>
     <%= link_to "Infos", informations_path, class: "#{'active' if params[:action].include?('informations')}" %>
@@ -36,13 +42,19 @@
       <%= link_to "IMDB", "https://www.imdb.com/name/nm7161845/", target: "_blank" %>
     </li>
     <li>
-      <%= link_to "Spotify", "https://open.spotify.com/artist/2LCWayrRO11GMlRVqnmHpK", target: "_blank" %>
-    </li>
-    <li>
       <%= link_to "Infos", informations_path, class: "#{'active' if params[:action].include?('informations')}" %>
     </li>
-    <li>
+    <li class="mb-5">
       <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('contact')}" %>
+    </li>
+    <li class="music">
+      <%= link_to "Spotify", "https://open.spotify.com/artist/2LCWayrRO11GMlRVqnmHpK", target: "_blank" %>
+    </li>
+    <li class="music">
+      <%= link_to "Apple Music", "https://itunes.apple.com/ca/artist/maxime-herv%C3%A9/id1444851749", target: "_blank" %>
+    </li>
+    <li class="music">
+      <%= link_to "Deezer", "https://www.deezer.com/fr/artist/57169412", target: "_blank" %>
     </li>
   </ul>
 </div>

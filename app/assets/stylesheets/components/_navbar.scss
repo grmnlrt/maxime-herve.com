@@ -33,10 +33,27 @@
     text-align: center;
   }
 
+  .dropdown-menu {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px;
+  }
+
   a {
     padding: 8px 16px;
     display: flex;
     justify-content: center;
+
+    &.dropdown-item {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      padding: 4px 8px;
+      text-transform: none;
+      font-family: $body-font;
+
+      i {
+        margin-left: 8px;
+      }
+    }
   }
 
   @media (min-width: 768px) {
@@ -57,6 +74,10 @@
   background: white;
   width: 100%;
   z-index: 3;
+
+  .music {
+    font-size: 0.7em;
+  }
 
   .burger {
     position: fixed;
