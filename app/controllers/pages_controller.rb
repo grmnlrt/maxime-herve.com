@@ -7,5 +7,6 @@ class PagesController < ApplicationController
   end
 
   def informations
+    @page = Page.find_by(slug: 'informations')
   end
 end

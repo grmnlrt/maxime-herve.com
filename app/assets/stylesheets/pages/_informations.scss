@@ -13,9 +13,7 @@
 }
 
 .year {
-  font-weight: bolder;
-  background-color: $light-gray;
-  padding: 8px;
+  opacity: 0.6;
 }
 
 .paragraph {
@@ -26,9 +24,12 @@
   }
 }
 
-@media (min-width: 768px) {
-  .infos-biography {
-  columns: 2;
+.infos-biography {
+  padding: 32px 0;
+
+  &:first-child {
+    padding-top: 0;
+    border-bottom: 1px #acacac solid;
   }
 }
 
