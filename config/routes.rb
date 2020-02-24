@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root to: 'pages#home'
   get 'contact', to: 'pages#contact'
-  get 'informations', to: 'pages#informations'
   resources :games, only: :index
   resources :movies, only: :index
   resources :messages, only: :create

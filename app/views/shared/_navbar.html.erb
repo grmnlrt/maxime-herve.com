@@ -1,5 +1,8 @@
 <ul class="navbar-mh">
   <li>
+    <%= link_to "Home", root_path, class: "#{'active' if params[:action].include?('home')}" %>
+  </li>
+  <li>
     <%= link_to "Films", movies_path, class: "#{'active' if params[:controller].include?('movie')}" %>
   </li>
   <li>
@@ -18,9 +21,6 @@
     </div>
   </li>
   <li>
-    <%= link_to "Infos", informations_path, class: "#{'active' if params[:action].include?('informations')}" %>
-  </li>
-  <li>
     <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('contact')}" %>
   </li>
 </ul>
@@ -33,6 +33,9 @@
   <div class="mask"></div>
   <ul>
     <li>
+      <%= link_to "Home", root_path, class: "#{'active' if params[:action].include?('home')}" %>
+    </li>
+    <li>
       <%= link_to "Films", movies_path, class: "#{'active' if params[:controller].include?('movie')}" %>
     </li>
     <li>
@@ -40,9 +43,6 @@
     </li>
     <li>
       <%= link_to "IMDB", "https://www.imdb.com/name/nm7161845/", target: "_blank" %>
-    </li>
-    <li>
-      <%= link_to "Infos", informations_path, class: "#{'active' if params[:action].include?('informations')}" %>
     </li>
     <li class="mb-5">
       <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('contact')}" %>

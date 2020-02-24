@@ -1,8 +1,24 @@
-<div id="homepage" data-controller="homepage">
-  <div class="bg movies" data-target="homepage.movies"></div>
-  <div class="bg games" data-target="homepage.games"></div>
-  <%= link_to "Films", movies_path, data: { action: 'mouseover->homepage#toggleMoviesClass mouseout->homepage#toggleMoviesClass' } %>
-  <%= link_to "Games", games_path, data: { action: 'mouseover->homepage#toggleGamesClass mouseout->homepage#toggleGamesClass' } %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="wrapper-800">
+        <div class="infos-biography">
+          <%= @page.content_en.html_safe %>
+        </div>
+        <div class="infos-biography">
+          <%= @page.content_fr.html_safe %>
+        </div>
+        <div class="infos-rewards">
+          <h1 class="h4">REWARDS</h1>
+          <% @rewards.each do |reward| %>
+            <div class="award">
+              <p>
+                <span><%= reward.year %></span><%= reward.description %>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
