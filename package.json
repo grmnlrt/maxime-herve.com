@@ -2,10 +2,10 @@
   "name": "maxime-herve_com",
   "license": "UNLICENSED",
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   },
   "dependencies": {
-    "@rails/webpacker": "^4.2.0",
+    "@rails/webpacker": "^5.4.3",
     "bootstrap": "^4.4.1",
     "hover-effect": "^1.1.0",
     "jquery": "^3.5.0",
