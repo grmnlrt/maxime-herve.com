@@ -21,6 +21,8 @@ gem 'activeadmin'
 gem 'invisible_captcha'
 gem 'sendgrid-ruby'
 gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
 
 group :development do
   gem 'web-console'

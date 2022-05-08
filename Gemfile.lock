@@ -166,6 +166,14 @@ GEM
     mini_mime (1.1.2)
     minitest (5.15.0)
     msgpack (1.5.1)
+    net-imap (0.2.3)
+      digest
+      net-protocol
+      strscan
+    net-pop (0.1.1)
+      digest
+      net-protocol
+      timeout
     net-protocol (0.1.3)
       timeout
     net-smtp (0.3.1)
@@ -270,6 +278,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    strscan (3.0.1)
     thor (1.2.1)
     tilt (2.0.10)
     timeout (0.2.0)
@@ -314,6 +323,8 @@ DEPENDENCIES
   kaminari
   letter_opener
   listen (~> 3.0.5)
+  net-imap
+  net-pop
   net-smtp
   pg (~> 1.1)
   pry-byebug
