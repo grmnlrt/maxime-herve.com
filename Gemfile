@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-ruby '2.6.3'
+ruby '3.1.1'
 
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
-gem 'pg', '~> 0.21'
+gem 'pg', '~> 1.1'
 gem 'puma'
-gem 'rails', '5.2.3'
+gem 'rails', '6.1.5.1'
 gem 'redis'
 
 gem 'autoprefixer-rails'
@@ -15,14 +15,14 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-gem 'cloudinary', '~> 1.12.0'
+gem 'cloudinary'
 gem 'kaminari'
 gem 'activeadmin'
 gem 'invisible_captcha'
 gem 'sendgrid-ruby'
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console'
   gem 'letter_opener'
 end
 
