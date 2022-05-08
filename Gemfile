@@ -20,6 +20,7 @@ gem 'kaminari'
 gem 'activeadmin'
 gem 'invisible_captcha'
 gem 'sendgrid-ruby'
+gem 'net-smtp'
 
 group :development do
   gem 'web-console'
