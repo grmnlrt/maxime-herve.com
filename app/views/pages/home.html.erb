@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col">
       <div class="wrapper-800">
+        <%= image_tag "MAXIMEHERVE_TMAX400.jpg", alt: "Maxime Hervé - Music composer in Paris", class: "w-100" %>
         <div class="infos-biography">
           <%= @page.content_en.html_safe %>
         </div>
@@ -11,10 +12,11 @@
         <div class="infos-rewards">
           <h1 class="h4">REWARDS</h1>
           <% @rewards.each do |reward| %>
-            <div class="award">
+            <div class="award d-flex">
               <p>
-                <span><%= reward.year %></span><%= reward.description %>
+                <span><%= reward.year %></span>
               </p>
+              <p><%= reward.description %></p>
             </div>
           <% end %>
         </div>
