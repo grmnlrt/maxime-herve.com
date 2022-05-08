@@ -1,8 +1,15 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="wrapper-800">
+  <div class="wrapper-800">
+    <div class="row">
+      <div class="col">
         <h1 class="h4 mb-4">Contact me</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <%= image_tag "MAXIMEHERVE_PORTRAIT.jpg", alt: "Maxime Hervé - French music composer based in Paris", class: "w-100 mb-4" %>
+      </div>
+      <div class="col-12 col-md-8">
         <%= simple_form_for @message, html: { class: "contact-form mb-5" } do |f| %>
           <%= invisible_captcha %>
           <%= f.input :email, label: false, placeholder: "your@email.com" %>

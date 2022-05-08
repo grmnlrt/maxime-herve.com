@@ -87,8 +87,8 @@
     cursor: pointer;
 
     div {
-      width: 48px;
-      height: 8px;
+      width: 40px;
+      height: 6px;
       background: $gray;
       margin-bottom: 8px;
       transition: all .3s ease
@@ -145,11 +145,11 @@
       }
 
       div:nth-child(2) {
-        transform: rotate(45deg) translateY(11px);
+        transform: rotate(45deg) translateY(10px);
       }
 
       div:nth-child(3) {
-        transform: rotate(-45deg) translateY(-11px);
+        transform: rotate(-45deg) translateY(-10px);
       }
     }
   }
