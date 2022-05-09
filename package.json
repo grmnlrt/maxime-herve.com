@@ -5,11 +5,10 @@
     "node": "16.x"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.5",
     "@rails/webpacker": "^5.4.3",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.1.3",
     "hover-effect": "^1.1.0",
-    "jquery": "^3.5.0",
-    "popper.js": "^1.16.0",
     "stimulus": "^1.1.1"
   },
   "devDependencies": {
