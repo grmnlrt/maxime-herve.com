@@ -15,4 +15,8 @@ module ApplicationHelper
       image_tag "no-picture.png", options
     end
   end
+
+  def emoji(content)
+    Twemoji.parse(content, img_attrs: {style: "height: 1em; margin: 0px;"}).html_safe
+  end
 end

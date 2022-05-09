@@ -23,6 +23,7 @@ gem 'sendgrid-ruby'
 gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
+gem 'twemoji'
 
 group :development do
   gem 'web-console'
