@@ -11,14 +11,8 @@
   <li>
     <%= link_to "IMDB", "https://www.imdb.com/name/nm7161845/", target: "_blank" %>
   </li>
-  <li class="dropdown">
-
-    <%= link_to "Music", "#", id: "musicmenu", data: { toggle: "dropdown" } %>
-    <div class="dropdown-menu" aria-labelledby="musicmenu">
-      <%= link_to "Spotify", "https://open.spotify.com/artist/2LCWayrRO11GMlRVqnmHpK", class: "dropdown-item", target: "_blank" %>
-      <%= link_to "Apple Music", "https://itunes.apple.com/ca/artist/maxime-herv%C3%A9/id1444851749", class: "dropdown-item", target: "_blank" %>
-      <%= link_to "Deezer", "https://www.deezer.com/fr/artist/57169412", class: "dropdown-item", target: "_blank" %>
-    </div>
+  <li>
+    <%= link_to "Music", music_path, class: "#{'active' if params[:controller].include?('game')}" %>
   </li>
   <li>
     <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('contact')}" %>
@@ -44,8 +38,11 @@
     <li>
       <%= link_to "IMDB", "https://www.imdb.com/name/nm7161845/", target: "_blank" %>
     </li>
+    <li>
+      <%= link_to "Music", music_path, class: "#{'active' if params[:controller].include?('game')}" %>
+    </li>
     <li class="mb-5">
-      <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('contact')}" %>
+      <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('music')}" %>
     </li>
     <li class="music">
       <%= link_to "Spotify", "https://open.spotify.com/artist/2LCWayrRO11GMlRVqnmHpK", target: "_blank" %>
