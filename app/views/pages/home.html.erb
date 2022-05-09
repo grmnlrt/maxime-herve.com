@@ -3,13 +3,25 @@
     <div class="col">
       <div class="wrapper-800">
         <%= image_tag "MAXIMEHERVE_TMAX400.jpg", alt: "Maxime Hervé - Music composer in Paris", class: "w-100" %>
-        <div class="infos-biography">
-          <%= @page.content_en.html_safe %>
+        <div class="mt-4 mb-5">
+          <ul class="nav nav-tabs justify-content-end mb-3" id="bio" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="en-tab" data-bs-toggle="tab" data-bs-target="#en" type="button" role="tab" aria-controls="en" aria-selected="true"><%= emoji(":flag-gb:") %></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="fr-tab" data-bs-toggle="tab" data-bs-target="#fr" type="button" role="tab" aria-controls="fr" aria-selected="false"><%= emoji(":flag-fr:") %></button>
+            </li>
+          </ul>
+          <div class="tab-content" id="bioContent">
+            <div class="tab-pane fade show active" id="en" role="tabpanel" aria-labelledby="en-tab">
+              <%= @page.content_en.html_safe %>
+            </div>
+            <div class="tab-pane fade" id="fr" role="tabpanel" aria-labelledby="fr-tab">
+              <%= @page.content_fr.html_safe %>
+            </div>
+          </div>
         </div>
-        <div class="infos-biography">
-          <%= @page.content_fr.html_safe %>
-        </div>
-        <div class="infos-rewards">
+        <div class="infos-rewards mt-3">
           <h1 class="h4">REWARDS</h1>
           <% @rewards.each do |reward| %>
             <div class="award d-flex">
