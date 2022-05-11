@@ -39,10 +39,10 @@
       <%= link_to "IMDB", "https://www.imdb.com/name/nm7161845/", target: "_blank" %>
     </li>
     <li>
-      <%= link_to "Music", music_path, class: "#{'active' if params[:controller].include?('game')}" %>
+      <%= link_to "Music", music_path, class: "#{'active' if params[:action].include?('music')}" %>
     </li>
     <li class="mb-5">
-      <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('music')}" %>
+      <%= link_to "Contact", contact_path, class: "#{'active' if params[:action].include?('contact')}" %>
     </li>
     <li class="music">
       <%= link_to "Spotify", "https://open.spotify.com/artist/2LCWayrRO11GMlRVqnmHpK", target: "_blank" %>
