@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="wrapper-800">
+    <div class="row">
+      <div class="col">
+        <h1 class="h5 mb-4">Music playlist</h1>
+
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1154599165&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+        <h2 class="h6 mt-3">Also on</h2>
+        <ul class="list-unstyled">
+          <li class="ms-2 mb-2">
+            <%= link_to "https://open.spotify.com/artist/2LCWayrRO11GMlRVqnmHpK", class: "link-dark", target: "_blank" do %>
+              <i class="fa-brands fa-spotify me-1"></i> Spotify
+            <% end %>
+          </li>
+          <li class="ms-2 mb-2">
+            <%= link_to "https://itunes.apple.com/ca/artist/maxime-herv%C3%A9/id1444851749", class: "link-dark", target: "_blank" do %>
+              <i class="fa-brands fa-apple me-1"></i> Apple Music
+            <% end %>
+          </li>
+          <li class="ms-2 mb-2">
+            <%= link_to "https://www.deezer.com/fr/artist/57169412", class: "link-dark", target: "_blank" do %>
+              <i class="fa-brands fa-deezer me-1"></i> Deezer
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

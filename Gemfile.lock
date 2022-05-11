@@ -105,8 +105,8 @@ GEM
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.5)
-    font-awesome-sass (5.6.1)
-      sassc (>= 1.11)
+    font-awesome-sass (6.1.1)
+      sassc (~> 2.0)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
     formtastic_i18n (0.7.0)
@@ -282,6 +282,8 @@ GEM
     thor (1.2.1)
     tilt (2.0.10)
     timeout (0.2.0)
+    twemoji (3.1.8)
+      nokogiri (~> 1.6)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
@@ -317,7 +319,7 @@ DEPENDENCIES
   cloudinary
   devise
   dotenv-rails
-  font-awesome-sass (~> 5.6.1)
+  font-awesome-sass (~> 6.1)
   invisible_captcha
   jbuilder (~> 2.0)
   kaminari
@@ -337,6 +339,7 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
+  twemoji
   uglifier
   web-console
   webpacker
