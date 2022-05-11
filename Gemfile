@@ -10,7 +10,6 @@ gem 'rails', '6.1.5.1'
 gem 'redis'
 
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
@@ -24,6 +23,7 @@ gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
 gem 'twemoji'
+gem 'font-awesome-sass', '~> 6.1'
 
 group :development do
   gem 'web-console'
