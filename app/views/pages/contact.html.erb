@@ -13,9 +13,9 @@
       <div class="col-12 col-md-8">
         <%= simple_form_for @message, html: { class: "contact-form mb-5" } do |f| %>
           <%= invisible_captcha %>
-          <%= f.input :email, label: false, placeholder: "your@email.com" %>
-          <%= f.input :subject, label: false, placeholder: "Type the object of your message here" %>
-          <%= f.input :content, label: false, placeholder: "Type your message here", input_html: { rows: 8 } %>
+          <%= f.input :email, label: false, placeholder: "your@email.com", wrapper_html: {class: "mb-2"} %>
+          <%= f.input :subject, label: false, placeholder: "Type the object of your message here", wrapper_html: {class: "mb-2"} %>
+          <%= f.input :content, label: false, placeholder: "Type your message here", input_html: { rows: 8 }, wrapper_html: {class: "mb-2"} %>
           <div class="d-flex justify-content-end">
             <%= f.submit "Send message", class: "btn btn-default" %>
           </div>
